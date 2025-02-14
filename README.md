@@ -25,7 +25,7 @@ A modern, open-source tool for building JSON graphs through an interactive conve
 
 The **jsongraph-builder** project leverages a simple Langgraph agent (using `createReactAgent`) that triggers a tool to generate a JSON graph structure. The graph consists of nodes and edges represented by the following type:
 
-\`\`\`typescript
+```typescript
 export type IGraph = {
   nodes: {
     id: string;
@@ -36,7 +36,7 @@ export type IGraph = {
     targetId: string;
   }[];
 };
-\`\`\`
+```
 
 These nodes get mapped to a predefined list of nodes, grouped by category, such as **Trigger Nodes**, **API Integration Nodes**, **File Processing Nodes**, **Data Processing Nodes**, **Database & Query Nodes**, **Logic & Transformation Nodes**, and **Output Nodes**.
 
@@ -57,11 +57,11 @@ These nodes get mapped to a predefined list of nodes, grouped by category, such 
 
 Clone the repository and install the dependencies:
 
-\`\`\`bash
+```bash
 git clone https://github.com/Leniolabs/jsongraph-builder.git
 cd jsongraph-builder
 npm install
-\`\`\`
+```
 
 Setup your OPENAI_API_KEY under the .env (copy the .env.example)
 
@@ -73,9 +73,9 @@ Setup your OPENAI_API_KEY under the .env (copy the .env.example)
 
 Start the development server with:
 
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 
 This will launch the Vite development server.
 
@@ -83,9 +83,9 @@ This will launch the Vite development server.
 
 To build the project for deployment:
 
-\`\`\`bash
+```bash
 docker-compose build
-\`\`\`
+```
 
 ---
 

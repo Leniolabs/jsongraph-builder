@@ -1,0 +1,11 @@
+version: "3"
+services:
+  jsongraph-nginx:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        - VITE_OPENAI_API_KEY=""
+    container_name: jsongraph-nginx
+    ports:
+      - "80:80"

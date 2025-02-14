@@ -1,0 +1,70 @@
+#root,
+.dropzone-wrapper {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.react-flow {
+  max-width: calc(100% - 280px - 350px) !important;
+  left: 280px;
+}
+
+.react-flow__node-input,
+.react-flow__node-default,
+.react-flow__node-output,
+.react-flow__node-common,
+.react-flow__node-trigger,
+.react-flow__node-group {
+  padding: 10px;
+  border-radius: var(
+    --xy-node-border-radius,
+    var(--xy-node-border-radius-default)
+  );
+  width: 150px;
+  font-size: 10px;
+  color: var(--xy-node-color, var(--xy-node-color-default));
+  text-align: center;
+  border: var(--xy-node-border, var(--xy-node-border-default));
+  background-color: var(
+    --xy-node-background-color,
+    var(--xy-node-background-color-default)
+  );
+}
+
+.react-flow__node-input.selectable:hover,
+.react-flow__node-default.selectable:hover,
+.react-flow__node-common.selectable:hover,
+.react-flow__node-trigger.selectable:hover,
+.react-flow__node-output.selectable:hover,
+.react-flow__node-group.selectable:hover {
+  box-shadow: var(
+    --xy-node-boxshadow-hover,
+    var(--xy-node-boxshadow-hover-default)
+  );
+}
+
+.node-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 100%;
+}
+
+.react-flow__node-output .react-flow__handle,
+.react-flow__node-common .react-flow__handle,
+.react-flow__node-trigger .react-flow__handle {
+  min-width: 12px;
+  min-height: 12px;
+  width: 12px;
+  height: 12px;
+}
+
+.react-flow__node-output .react-flow__handle:hover,
+.react-flow__node-common .react-flow__handle:hover,
+.react-flow__node-trigger .react-flow__handle:hover {
+  background-color: brown;
+}

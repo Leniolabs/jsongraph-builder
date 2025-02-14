@@ -1,7 +1,7 @@
 import React from "react";
 import { ProseEditor } from "./ProseEditor";
 import { useProseEditor } from "./useProseEditor";
-import { DynamicIcon } from "lucide-react/dynamic";
+import { ArrowUp } from "lucide-react";
 
 export interface ChatInputComponentProps {
   onSend: (message: string) => void;
@@ -48,7 +48,7 @@ export function ChatInput(props: ChatInputComponentProps) {
             onKeyDown={handleKeyDown}
           />
           <button onClick={handleSubmitClick}>
-            <DynamicIcon name="arrow-up" />
+            <ArrowUp />
           </button>
         </div>
       </div>

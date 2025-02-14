@@ -1,7 +1,7 @@
 import React from "react";
 import { NodeItem, nodes } from "../../utils/nodes";
-import { DynamicIcon } from "lucide-react/dynamic";
 import "./sidebar.css";
+import { Icon } from "../Icons";
 
 export function Sidebar() {
   const [searchTerm, setSearchTerm] = React.useState("");
@@ -52,7 +52,7 @@ export function Sidebar() {
                   >
                     <div className="icon">
                       {node.icon ? (
-                        <DynamicIcon name={node.icon} />
+                        <Icon icon={node.icon} />
                       ) : (
                         <svg width="40" height="40" viewBox="0 0 24 24">
                           <circle cx="12" cy="12" r="10" fill="#888" />

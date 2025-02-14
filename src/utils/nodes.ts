@@ -321,3 +321,9 @@ export const nodes: NodeGroup[] = [
 export const nodeTypes = nodes
   .flatMap((group) => group.nodes)
   .map((node) => node.id);
+
+export const usedIcons = nodes.flatMap((group) =>
+  group.nodes.map((node) => node.icon)
+);
+
+console.log(usedIcons);

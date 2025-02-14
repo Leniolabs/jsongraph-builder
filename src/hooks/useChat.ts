@@ -80,9 +80,9 @@ export function useChat(options: {
           }
         } else if (type === "updates") {
           // const [update, meta] = value;
-          console.log("update", value);
-          if (value.agent.graph) {
-            onGraphUpdate?.(value.agent.graph);
+          const updatedGraph = value.agent.graph as IGraph;
+          if (updatedGraph?.nodes?.length) {
+            onGraphUpdate?.(updatedGraph);
           }
         }
         setTimeout(() => {

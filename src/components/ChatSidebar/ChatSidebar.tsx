@@ -15,7 +15,7 @@ import {
 } from "../../utils/graph";
 
 export function ChatSidebar() {
-  const { setNodes, setEdges, getNodes, getEdges } = useReactFlow();
+  const { setNodes, setEdges, getNodes, getEdges, fitView } = useReactFlow();
 
   const { messages, sendMessage, loading } = useChat({
     currentGraph: getGraphFromFlow(getNodes(), getEdges()),
@@ -44,6 +44,13 @@ export function ChatSidebar() {
 
       setNodes(updated.nodes as Node[]);
       setEdges(updated.edges as Edge[]);
+
+      setTimeout(() => {
+        fitView({
+          padding: 0.1,
+          duration: 10,
+        });
+      }, 100);
     },
   });
   const messagesEndRef = React.useRef<HTMLDivElement>(null);

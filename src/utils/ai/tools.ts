@@ -58,6 +58,13 @@ async function getGraph(
     content: `Generate a JSON structure of nodes and links using the available nodes.
 The proposed graph has to provide a solution to the request made by the user.
 
+IMPORTANT: 
+- Make sure that the trigger and the output are consistent with the description. 
+- The inner workings are up to you unless specified by the user.
+- Make sure that the graph is consistent with the user request.
+- When adding nodes to process data or different types of information, make sure to parse that data accordingly using the provided nodes.
+- Try to create the simplest workflow that can handle the user request, unless the user specifies otherwise.
+
 ${formatNodesForPrompt()}
 `,
   } as ChatCompletionMessageParam;
@@ -119,9 +126,9 @@ export const createGraphTool = tool(
   },
   {
     name: "create_graph",
-    description: "Create a graph based on a detailed description.",
+    description: "Use this to create a graph.",
     schema: z
       .string()
-      .describe("The detailed description of the graph to create."),
+      .describe("Send a clean description of the user requirements. Be detailed and considering all the history on the chat."),
   }
 );
